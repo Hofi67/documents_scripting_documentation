@@ -9,13 +9,6 @@
 The DOCUMENTS Server supports an embedded scripting language called PortalScript and is an extension to JavaScript.
 Since DOCUMENTS 6 the Chrome JavaScript Engine V8 is embedded.
 
-**Notes**
-
-* The PortalScripting API environment is only available in fully activated DOCUMENTS licenses, it cannot be used inside pure retrieval principals (EasyWEB principals).
-* A history of the PortalScripting API can be found at the [Changelog](changelog.md)
-* For Documents 5 see also [Firefox JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* For Documents 6 see also [https://V8.dev](https://v8.dev)
-
 ### Script Exits
 
 The PortalScripting allows to widely customize the behaviour of your system.
