@@ -18,7 +18,7 @@ Currently is this Node.js v18.15.0 (LTS) / V8 10.2.
 **Notes**
 
 * The PortalScripting API environment is only available in fully activated DOCUMENTS licenses, it cannot be used inside pure retrieval principals (EasyWEB principals).
-* A history of the PortalScripting API can be found at the [Changelog](changelog.html)
+* A history of the PortalScripting API can be found at the [Changelog](changelog.md)
 * For Documents 5 see also [Firefox JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * For Documents 6 see also [https://V8.dev](https://v8.dev)
 
@@ -30,7 +30,7 @@ called at special points in the system. These points are called <b>Script Exits<
 To use this feature, you can simply create a PortalScript and attach it to one
 of the Script Exits. You'll find the Script Exits in the DOCUMENTS Manager.
 
-You can find the entire list and documentation in chapter <a href="scriptexits.html">Script Exits</a>.
+You can find the entire list and documentation in chapter <a href="scriptexits.md">Script Exits</a>.
 The following list just shows a small overview:
 
 * Common file actions like
@@ -55,9 +55,9 @@ PortalScripts may also be used to implement special requirements in DOCUMENTS, s
 * Create reports
 * Access to xml-data with integrated DOMParser
   * **E4X is removed from DOCUMENTS since 5.0!**
-  * [See example](xml-dom.html)
+  * [See example](xml-dom.md)
 * Realization of daily housekeeping jobs
-* Call [external DLLs](dlls.html) to trigger third-party systems
+* Call [external DLLs](dlls.md) to trigger third-party systems
 
 The PortalScript runtime environment grants access to a couple of properties of files or fields.
 You can also read out named constants (AutoTexts) like the current user or the name of the current workflow step.
@@ -70,53 +70,53 @@ In the following list you will find a small overview of all available classes an
 Predefined objects are explained in a contextual usage (i.e. when editing a file, fill a dropdown list etc.).
 
 Predefined objects:
-* [Context](modules/context.html) (implicit object) - root object which refers to DOCUMENTS objects via PortalScript (i.e. file, folder).
-* [Util](modules/util.html) (implicit object) - global object, providing several utility functions.
-* [PropertyCache](interfaces/propertycache.html) - this class makes it possible to store / cache data over the end of the run time of a script.
+* [Context](modules/context.md) (implicit object) - root object which refers to DOCUMENTS objects via PortalScript (i.e. file, folder).
+* [Util](modules/util.md) (implicit object) - global object, providing several utility functions.
+* [PropertyCache](interfaces/propertycache.md) - this class makes it possible to store / cache data over the end of the run time of a script.
 * enumval (implicit array) - Definition of enumeration values using a script.
 
 Some classes and interfaces:
-* [AccessProfile](classes/AccessProfile.html) / [AccessProfileIterator](interfaces/AccessProfileIterator.html) - represents an access profile (group)
-* [SystemUser](interfaces/SystemUser.html) / [SystemUserIterator](interfaces/SystemUserIterator.html) - represents DOCUMENTS Users
-* [CustomProperty](interfaces/CustomProperty.html) / [CustomPropertyIterator](interfaces/CustomPropertyIterator.html) - represents a class for storing user specific properties
+* [AccessProfile](classes/AccessProfile.md) / [AccessProfileIterator](interfaces/AccessProfileIterator.md) - represents an access profile (group)
+* [SystemUser](interfaces/SystemUser.md) / [SystemUserIterator](interfaces/SystemUserIterator.md) - represents DOCUMENTS Users
+* [CustomProperty](interfaces/CustomProperty.md) / [CustomPropertyIterator](interfaces/CustomPropertyIterator.md) - represents a class for storing user specific properties
 
-* [FileResultset](classes/FileResultset.html) - represents a list of DOCUMENTS files
-* [ArchiveFileResultset](classes/ArchiveFileResultset.html) - represents a list of archive files
-* [Folder](interfaces/Folder.html) / [FolderIterator](interfaces/FolderIterator.html) - this class grants access to all kinds of (public) folders
-* [HitResultset](classes/HitResultset.html) / [DocHit](interfaces/DocHit.html) - classes allow comprehensive search operations in Documents and in connected archives.
+* [FileResultset](classes/FileResultset.md) - represents a list of DOCUMENTS files
+* [ArchiveFileResultset](classes/ArchiveFileResultset.md) - represents a list of archive files
+* [Folder](interfaces/Folder.md) / [FolderIterator](interfaces/FolderIterator.md) - this class grants access to all kinds of (public) folders
+* [HitResultset](classes/HitResultset.md) / [DocHit](interfaces/DocHit.md) - classes allow comprehensive search operations in Documents and in connected archives.
 
-* [DocFile](interfaces/DocFile.html) - represents a certain file of a filetype
-* [ArchivingDescription](classes/ArchivingDescription.html) - class to specify archiving option for a [DocFile](interfaces/DocFile.html)
-* [Register](interfaces/Register.html) / [RegisterIterator](interfaces/RegisterIterator.html) - represents a (public) folder of a file
-* [Document](interfaces/Document.html) / [DocumentIterator](interfaces/DocumentIterator.html) - represents a certain document that is stored on a document register of a file
+* [DocFile](interfaces/DocFile.md) - represents a certain file of a filetype
+* [ArchivingDescription](classes/ArchivingDescription.md) - class to specify archiving option for a [DocFile](interfaces/DocFile.md)
+* [Register](interfaces/Register.md) / [RegisterIterator](interfaces/RegisterIterator.md) - represents a (public) folder of a file
+* [Document](interfaces/Document.md) / [DocumentIterator](interfaces/DocumentIterator.md) - represents a certain document that is stored on a document register of a file
 
-* [WorkflowStep](interfaces/WorkflowStep.html) / [WorkflowStepIterator](interfaces/WorkflowStepIterator.html) - represents a workflow step
-* [ControlFlow](interfaces/ControlFlow.html) / [ControlFlowIterator](interfaces/ControlFlowIterator.html) - represents the controlflows in the workflow-engine
+* [WorkflowStep](interfaces/WorkflowStep.md) / [WorkflowStepIterator](interfaces/WorkflowStepIterator.md) - represents a workflow step
+* [ControlFlow](interfaces/ControlFlow.md) / [ControlFlowIterator](interfaces/ControlFlowIterator.md) - represents the controlflows in the workflow-engine
 
-* [DOMParser](classes/DOMParser.html) - provides basic methods to parse or synthesize XML documents using the DOM.
-* [DOMDocument](classes/DOMDocument.html) - represents the root of a DOM tree.
-* [DOMNode](interfaces/DOMNode.html) - the base class of all tree elements in a DOMDocument.
-* [DOMNodeList](interfaces/DOMNodeList.html) - a dynamic, ordered list of DOMNodes.
-* [DOMNamedNodeMap](interfaces/DOMNamedNodeMap.html) - a kind of index for a set of DOMNodes, in which each node has got a unique name.
-* [DOMElement](interfaces/DOMElement.html) - represents a HTML or XML element in the DOM.
-* [DOMCharacterData](interfaces/DOMCharacterData.html) - represents text-like nodes in the DOM tree.
-* [DOMAttr](interfaces/DOMAttr.html) - this class models a single attribute of a DOMElement.
-* [DOMDocumentType](classes/DOMDocumentType.html) - a container for %Document Type Declaration (DTD) information associated with a DOMDocument.
-* [DOMProcessingInstruction](interfaces/DOMProcessingInstruction.html) - represents a processing instruction node in the DOM tree.
-* [DOMEntity](interfaces/DOMEntity.html) - represents either an entity in an XML document or a notation in a DTD.
-* [DOMException](interfaces/DOMException.html) - represents DOMExceptions thrown by the DOM API functions.
+* [DOMParser](classes/DOMParser.md) - provides basic methods to parse or synthesize XML documents using the DOM.
+* [DOMDocument](classes/DOMDocument.md) - represents the root of a DOM tree.
+* [DOMNode](interfaces/DOMNode.md) - the base class of all tree elements in a DOMDocument.
+* [DOMNodeList](interfaces/DOMNodeList.md) - a dynamic, ordered list of DOMNodes.
+* [DOMNamedNodeMap](interfaces/DOMNamedNodeMap.md) - a kind of index for a set of DOMNodes, in which each node has got a unique name.
+* [DOMElement](interfaces/DOMElement.md) - represents a HTML or XML element in the DOM.
+* [DOMCharacterData](interfaces/DOMCharacterData.md) - represents text-like nodes in the DOM tree.
+* [DOMAttr](interfaces/DOMAttr.md) - this class models a single attribute of a DOMElement.
+* [DOMDocumentType](classes/DOMDocumentType.md) - a container for %Document Type Declaration (DTD) information associated with a DOMDocument.
+* [DOMProcessingInstruction](interfaces/DOMProcessingInstruction.md) - represents a processing instruction node in the DOM tree.
+* [DOMEntity](interfaces/DOMEntity.md) - represents either an entity in an XML document or a notation in a DTD.
+* [DOMException](interfaces/DOMException.md) - represents DOMExceptions thrown by the DOM API functions.
 
-* [File](classes/File.html) - class granting access to the physical file system of the machine running the DOCUMENTS-Server
-* [DBConnection](classes/DBConnection.html) / [DBResultSet](interfaces/DBResultSet.html) - These classes grant access to ODBC data sources and databases
-* [XMLExport](classes/XMLExport.html) / [XMLExportDescription](classes/XMLExportDescription.html) - classes to specify XML-export options to Documents elements.
-* [ScriptCall](classes/ScriptCall.html) - this class allows asynchronous calling a script from another script.
-* [Email](classes/Email.html) - this class allows to create and send an email.
-* [XMLHTTPRequest](classes/XMLHTTPRequest.html) - represents a HTTP request using XML in Windows.
+* [File](classes/File.md) - class granting access to the physical file system of the machine running the DOCUMENTS-Server
+* [DBConnection](classes/DBConnection.md) / [DBResultSet](interfaces/DBResultSet.md) - These classes grant access to ODBC data sources and databases
+* [XMLExport](classes/XMLExport.md) / [XMLExportDescription](classes/XMLExportDescription.md) - classes to specify XML-export options to Documents elements.
+* [ScriptCall](classes/ScriptCall.md) - this class allows asynchronous calling a script from another script.
+* [Email](classes/Email.md) - this class allows to create and send an email.
+* [XMLHTTPRequest](classes/XMLHTTPRequest.md) - represents a HTTP request using XML in Windows.
 
-* [XLSXWriter](classes/XLSXWriter.html) - allows creating files in the Excel 2007+ XLSX file format.
-* [XLSXWorksheet](interfaces/XLSXWorksheet.html) - represents the Excel worksheet.
-* [XLSXChartsheet](interfaces/XLSXChartsheet.html) - represents the Excel chartsheet.
-* [XLSXFormat](interfaces/XLSXFormat.html) - allows formatting cells in Excel.
-* [XLSXChart](interfaces/XLSXChart.html) - allows creating an Excel chart.
-* [XLSXChartSeries](interfaces/XLSXChartSeries.html) - represents the Excel chart data series.
-* [XLSXChartAxis](interfaces/XLSXChartAxis.html) - represents the Excel chart axis.
+* [XLSXWriter](classes/XLSXWriter.md) - allows creating files in the Excel 2007+ XLSX file format.
+* [XLSXWorksheet](interfaces/XLSXWorksheet.md) - represents the Excel worksheet.
+* [XLSXChartsheet](interfaces/XLSXChartsheet.md) - represents the Excel chartsheet.
+* [XLSXFormat](interfaces/XLSXFormat.md) - allows formatting cells in Excel.
+* [XLSXChart](interfaces/XLSXChart.md) - allows creating an Excel chart.
+* [XLSXChartSeries](interfaces/XLSXChartSeries.md) - represents the Excel chart data series.
+* [XLSXChartAxis](interfaces/XLSXChartAxis.md) - represents the Excel chart axis.
