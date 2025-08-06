@@ -2,18 +2,12 @@
 
 ***
 
-# Portalscript API
+# Portalscript API / Documents Script API
 
 ## Introduction
 
 The DOCUMENTS Server supports an embedded scripting language called PortalScript and is an extension to JavaScript.
- In DOCMENTS 5 the Mozilla JavaScript engine SpiderMonkey 24 is used and implements ECMAScript 5.1 and parts of ECMAScript 6.
-Since DOCUMENTS 6 the Chrome JavaScript Engine V8 is embedded. DOCUMENTS 6 uses the same V8 engine as Nodes.js.
-Currently is this Node.js v18.15.0 (LTS) / V8 10.2.
-
-**Import**
-
-*   There are some breaking changes in PortalScripting between Documents 5 and Documents 6. For details check our documentation portal [https://otris.software](https://otris.software)
+Since DOCUMENTS 6 the Chrome JavaScript Engine V8 is embedded.
 
 **Notes**
 
@@ -80,31 +74,17 @@ Some classes and interfaces:
 * [SystemUser](interfaces/SystemUser.md) / [SystemUserIterator](interfaces/SystemUserIterator.md) - represents DOCUMENTS Users
 * [CustomProperty](interfaces/CustomProperty.md) / [CustomPropertyIterator](interfaces/CustomPropertyIterator.md) - represents a class for storing user specific properties
 
+* [DocFile](interfaces/DocFile.md) - represents a certain file of a filetype
+* [Register](interfaces/Register.md) / [RegisterIterator](interfaces/RegisterIterator.md) - represents a (public) folder of a file
+* [Document](interfaces/Document.md) / [DocumentIterator](interfaces/DocumentIterator.md) - represents a certain document that is stored on a document register of a file
 * [FileResultset](classes/FileResultset.md) - represents a list of DOCUMENTS files
 * [ArchiveFileResultset](classes/ArchiveFileResultset.md) - represents a list of archive files
 * [Folder](interfaces/Folder.md) / [FolderIterator](interfaces/FolderIterator.md) - this class grants access to all kinds of (public) folders
 * [HitResultset](classes/HitResultset.md) / [DocHit](interfaces/DocHit.md) - classes allow comprehensive search operations in Documents and in connected archives.
-
-* [DocFile](interfaces/DocFile.md) - represents a certain file of a filetype
 * [ArchivingDescription](classes/ArchivingDescription.md) - class to specify archiving option for a [DocFile](interfaces/DocFile.md)
-* [Register](interfaces/Register.md) / [RegisterIterator](interfaces/RegisterIterator.md) - represents a (public) folder of a file
-* [Document](interfaces/Document.md) / [DocumentIterator](interfaces/DocumentIterator.md) - represents a certain document that is stored on a document register of a file
 
 * [WorkflowStep](interfaces/WorkflowStep.md) / [WorkflowStepIterator](interfaces/WorkflowStepIterator.md) - represents a workflow step
 * [ControlFlow](interfaces/ControlFlow.md) / [ControlFlowIterator](interfaces/ControlFlowIterator.md) - represents the controlflows in the workflow-engine
-
-* [DOMParser](classes/DOMParser.md) - provides basic methods to parse or synthesize XML documents using the DOM.
-* [DOMDocument](classes/DOMDocument.md) - represents the root of a DOM tree.
-* [DOMNode](interfaces/DOMNode.md) - the base class of all tree elements in a DOMDocument.
-* [DOMNodeList](interfaces/DOMNodeList.md) - a dynamic, ordered list of DOMNodes.
-* [DOMNamedNodeMap](interfaces/DOMNamedNodeMap.md) - a kind of index for a set of DOMNodes, in which each node has got a unique name.
-* [DOMElement](interfaces/DOMElement.md) - represents a HTML or XML element in the DOM.
-* [DOMCharacterData](interfaces/DOMCharacterData.md) - represents text-like nodes in the DOM tree.
-* [DOMAttr](interfaces/DOMAttr.md) - this class models a single attribute of a DOMElement.
-* [DOMDocumentType](classes/DOMDocumentType.md) - a container for %Document Type Declaration (DTD) information associated with a DOMDocument.
-* [DOMProcessingInstruction](interfaces/DOMProcessingInstruction.md) - represents a processing instruction node in the DOM tree.
-* [DOMEntity](interfaces/DOMEntity.md) - represents either an entity in an XML document or a notation in a DTD.
-* [DOMException](interfaces/DOMException.md) - represents DOMExceptions thrown by the DOM API functions.
 
 * [File](classes/File.md) - class granting access to the physical file system of the machine running the DOCUMENTS-Server
 * [DBConnection](classes/DBConnection.md) / [DBResultSet](interfaces/DBResultSet.md) - These classes grant access to ODBC data sources and databases
@@ -120,3 +100,16 @@ Some classes and interfaces:
 * [XLSXChart](interfaces/XLSXChart.md) - allows creating an Excel chart.
 * [XLSXChartSeries](interfaces/XLSXChartSeries.md) - represents the Excel chart data series.
 * [XLSXChartAxis](interfaces/XLSXChartAxis.md) - represents the Excel chart axis.
+
+* [DOMParser](classes/DOMParser.md) - provides basic methods to parse or synthesize XML documents using the DOM.
+* [DOMDocument](classes/DOMDocument.md) - represents the root of a DOM tree.
+* [DOMNode](interfaces/DOMNode.md) - the base class of all tree elements in a DOMDocument.
+* [DOMNodeList](interfaces/DOMNodeList.md) - a dynamic, ordered list of DOMNodes.
+* [DOMNamedNodeMap](interfaces/DOMNamedNodeMap.md) - a kind of index for a set of DOMNodes, in which each node has got a unique name.
+* [DOMElement](interfaces/DOMElement.md) - represents a HTML or XML element in the DOM.
+* [DOMCharacterData](interfaces/DOMCharacterData.md) - represents text-like nodes in the DOM tree.
+* [DOMAttr](interfaces/DOMAttr.md) - this class models a single attribute of a DOMElement.
+* [DOMDocumentType](classes/DOMDocumentType.md) - a container for %Document Type Declaration (DTD) information associated with a DOMDocument.
+* [DOMProcessingInstruction](interfaces/DOMProcessingInstruction.md) - represents a processing instruction node in the DOM tree.
+* [DOMEntity](interfaces/DOMEntity.md) - represents either an entity in an XML document or a notation in a DTD.
+* [DOMException](interfaces/DOMException.md) - represents DOMExceptions thrown by the DOM API functions.
