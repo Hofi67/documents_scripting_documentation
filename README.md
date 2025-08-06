@@ -48,10 +48,8 @@ PortalScripts may also be used to implement special requirements in DOCUMENTS, s
 * Calculate data
 * Create reports
 * Access to xml-data with integrated DOMParser
-  * **E4X is removed from DOCUMENTS since 5.0!**
-  * [See example](xml-dom.md)
 * Realization of daily housekeeping jobs
-* Call [external DLLs](dlls.md) to trigger third-party systems
+
 
 The PortalScript runtime environment grants access to a couple of properties of files or fields.
 You can also read out named constants (AutoTexts) like the current user or the name of the current workflow step.
