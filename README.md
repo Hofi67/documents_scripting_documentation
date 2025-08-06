@@ -55,8 +55,8 @@ In the following list you will find a small overview of all available classes an
 Predefined objects are explained in a contextual usage (i.e. when editing a file, fill a dropdown list etc.).
 
 Predefined objects:
-* [Context](modules/context.md) (implicit object) - root object which refers to DOCUMENTS objects via PortalScript (i.e. file, folder).
-* [Util](modules/util.md) (implicit object) - global object, providing several utility functions.
+* [Context](interfaces/Context.md) (implicit object) - root object which refers to DOCUMENTS objects via PortalScript (i.e. file, folder).
+* [Util](interfaces/Util.md) (implicit object) - global object, providing several utility functions.
 * [PropertyCache](interfaces/propertycache.md) - this class makes it possible to store / cache data over the end of the run time of a script.
 * enumval (implicit array) - Definition of enumeration values using a script.
 
